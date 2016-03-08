@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -34,7 +34,6 @@ gem 'web-console', group: :development
 
 group :development do
   gem 'guard' # NOTE: this is necessary in newer versions
-  gem 'guard-minitest'
 end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,12 +42,13 @@ group :development, :test do
   gem 'sqlite3'
   # gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'guard-minitest'
 end
 
 group :test do
   gem 'minitest-reporters'
   gem 'mini_backtrace'
-  gem 'guard-minitest'
+
 end
 
 group :production do
